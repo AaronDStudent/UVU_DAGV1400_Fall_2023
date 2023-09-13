@@ -36,27 +36,27 @@ public class Program
             {
             int userScore = Convert.ToInt32(Console.ReadLine());//This converts the user's score to an integer.
                
-            if (userScore >= 100){ //If the score is greater than or equal to 100, display message. If not, move on.
+            if (userScore > 100){ //If the score is greater than 100, display message. If not, move on.
             Console.WriteLine("You got an A+!\nExtra credit is always nice! I'm proud of you!");
             break;
             }
                 
-            if (userScore >= 90){ //If the score is greater than or equal to 90, display message. If not, move on.
+            if (userScore >= 90 && userScore <= 100 ){ //If the score is greater than or equal to 90 while also being smaller than or equal to 100, display message. If not, move on.
             Console.WriteLine("You got an A!\nYour hard work paid off!");
             break;
             }
                 
-            else if (userScore >= 80){//If the score is greater than or equal to 80, display message. If not, move on.
+            else if (userScore >= 80 && userScore <= 89){//If the score is greater than or equal to 80 while also being smaller than or equal to 89, display message. If not, move on.
             Console.WriteLine("You got an B!\nSolid score, good job!");
             break;
             }
                 
-            else if (userScore >= 70){//If the score is greater than or equal to 70, display message. If not, move on.
+            else if (userScore >= 70 && userScore <= 79){//If the score is greater than or equal to 70 while also being smaller than or equal to 79, display message. If not, move on.
             Console.WriteLine("You got an C!\nNot bad! Could've been better.");
             break;
             }
                 
-            else if (userScore >= 60){//If the score is greater than or equal to 60, display message. If not, move on.
+            else if (userScore >= 60 && userScore <= 69){//If the score is greater than or equal to 60 while also being smaller than or equal to 69, display message. If not, move on.
             Console.WriteLine("You got an D.\nIf you had applied yourself you could've gotten a higher score.");
             break;
             }
