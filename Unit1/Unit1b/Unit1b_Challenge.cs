@@ -76,8 +76,8 @@ public class Program
             Console.WriteLine("You got an F.\nNext time study and prepare yourself.");
             break;
             }
-
             }
+            
         Console.WriteLine("Of the core subjects taught in school, which one is your favorite?");
 		
 		subjectChecker = new SubjectChecker();
@@ -114,9 +114,6 @@ public class SubjectChecker {
                 Console.WriteLine("Learning where we came from to be aware of where we're going is vital to humanity.");
 				break;
         }
-
-        
     }
-
+    }
 }
-    }
