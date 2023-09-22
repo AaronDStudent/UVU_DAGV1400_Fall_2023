@@ -12,6 +12,10 @@ public class Program
         Random random = new Random(0);//This is the creation of a new random value.
         int randomNumber = random.Next(numberList.Length);//This turns the new random instance into an integer that is as long as the numberlist array, thus making a RNG of 1 - 10 since there are 10 values within the int[].
 
+        //Console.WriteLine("This is the random number changing: " + randomNumber); //This has to do with the comment I left on canvas.
+        //Remove those first forward slashes and the zero from the new random to see the random number change everytime the user inputs something new.
+
+
         while (userGuess > numberList[randomNumber])//While the user's guess is greater than the random number, run code below.
         {
             guessNumber++;//Add 1 to the guess counter.
