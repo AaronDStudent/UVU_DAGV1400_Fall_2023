@@ -47,11 +47,15 @@ public class PlayerController : MonoBehaviour
     //Delete any object with a trigger that hits the player.
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
         if(other.gameObject.tag == "Items")
         {
             inventory[0] = other.gameObject;
-            Debug.Log("Your inventory: " + inventory);
+            for (int i = 0; i < inventory.Length; i++)
+            {
+                Debug.Log(inventory[i]);
+            }
+            Destroy(other.gameObject);
         }
+        
     }
 }

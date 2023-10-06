@@ -575,6 +575,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!54 &1426756804
 Rigidbody:
   m_ObjectHideFlags: 0
