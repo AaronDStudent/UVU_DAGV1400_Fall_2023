@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -39,9 +41,17 @@ public class PlayerController : MonoBehaviour
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
         }
     }
+
+    [SerializeField] private GameObject[] inventory;
+    
     //Delete any object with a trigger that hits the player.
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        if(other.gameObject.tag == "Items")
+        {
+            inventory[0] = other.gameObject;
+            Debug.Log("Your inventory: " + inventory);
+        }
     }
 }
