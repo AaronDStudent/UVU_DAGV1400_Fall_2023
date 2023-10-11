@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserMoveForward : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
     public float speed = 50.0f;
     // Update is called once per frame
