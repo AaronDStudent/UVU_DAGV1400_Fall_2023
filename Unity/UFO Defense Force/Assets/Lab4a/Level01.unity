@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 25
+  speed: 45
   xRange: 27
   blaster: {fileID: 846264161}
   laserBolt: {fileID: 1591628230485006787, guid: 27765681e3540fc4489f9d3591346d6f, type: 3}
@@ -622,7 +622,7 @@ GameObject:
   m_Layer: 0
   m_Name: EnemySpawnManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -657,6 +657,52 @@ MonoBehaviour:
   - {fileID: 282484858210936741, guid: 94f61467bda06e34caf273fb5d37c9c0, type: 3}
   - {fileID: 2440774420480344948, guid: 14f223c543c8f5645a359b494edf9e71, type: 3}
   - {fileID: 7838227752634794833, guid: 26157177726733643bec07108d63b045, type: 3}
+--- !u!1 &2121176791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2121176793}
+  - component: {fileID: 2121176792}
+  m_Layer: 0
+  m_Name: PickupSpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2121176792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121176791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfb445f94e0abb4099bbaad6cd10d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupPrefabs:
+  - {fileID: 5229920107783549469, guid: af812a2d698bc1742b8baa16467f25f1, type: 3}
+--- !u!4 &2121176793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121176791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: -26.03818, z: 72.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -666,3 +712,4 @@ SceneRoots:
   - {fileID: 1358265304}
   - {fileID: 1426756802}
   - {fileID: 1976848235}
+  - {fileID: 2121176793}
