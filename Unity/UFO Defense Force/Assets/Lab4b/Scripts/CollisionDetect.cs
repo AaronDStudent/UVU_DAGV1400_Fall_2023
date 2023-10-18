@@ -5,23 +5,29 @@ using UnityEngine;
 
 public class CollisionDetect : MonoBehaviour
 {
-    void Awake()
+    public GameManager gameManager;
+    public ScoreManager scoreManager; //Store reference to score manager.
+    
+    public int scoreToGive;
+    
+    void Start()
     {
-        Time.timeScale = 1;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); // Find ScoreManager game object and reference ScoreManager script component.
     }
-    private void OnTriggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider other) //Once the Trigger has been entered record collision in the argument variable "other"
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Game Over");
-            Time.timeScale = 0;
+            gameManager.isGameOver = true;
             Destroy(other.gameObject);
         }
         else
         {
+            scoreManager.IncreaseScore(scoreToGive);// Increase the score.
             Destroy(gameObject);//Destroys this game object.
             Destroy(other.gameObject);//Destroys the other game object it hits.
         }
-
     }
 }

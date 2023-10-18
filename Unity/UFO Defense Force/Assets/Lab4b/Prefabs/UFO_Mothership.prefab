@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -20
+  gameManager: {fileID: 0}
 --- !u!54 &-381572918234501957
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -175,3 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbbb08e65dea274a98a0e862bc569b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  scoreManager: {fileID: 0}
+  scoreToGive: 50
