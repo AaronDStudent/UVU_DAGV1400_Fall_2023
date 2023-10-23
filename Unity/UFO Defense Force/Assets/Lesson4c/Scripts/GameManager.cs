@@ -7,11 +7,12 @@ public class GameManager : MonoBehaviour
 {
     public bool isGameOver;
     private GameObject gameOverText;
-
+    private SoundManager soundManager;
     void Awake()
     {
         Time.timeScale = 1;
         isGameOver = false;
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
     
     void Start()
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
+        soundManager.PlaySFX(soundManager.gameOverSound);
         gameOverText.gameObject.SetActive(true);//Make Game Over text appear.
         Time.timeScale = 0; // Freeze time.
     }

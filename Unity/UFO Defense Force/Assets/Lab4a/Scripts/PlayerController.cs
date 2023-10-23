@@ -16,6 +16,15 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
+    private SoundManager soundManager;
+
+    private bool isPlaying = false;
+
+    private void Awake()
+    {
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+    }
+
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //Reference GameManager script on GameManager object.
@@ -44,8 +53,15 @@ public class PlayerController : MonoBehaviour
         //If spacebar is pressed, fire laser bolt.
         if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false) //Second condition gameManager.isGameOver prevents the player from shooting after isGameOver becomes true.
         {
-            //Creates laserbolt at blaster transform position, maintaining the objects rotation.
+            //Creates laserbolt at blaster transform position, maintaining the objects rotation
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+            isPlaying = true;
+        }
+
+        if (isPlaying)
+        {
+            soundManager.PlaySFX(soundManager.laserBoltSound);
+            isPlaying = false;
         }
     }
 

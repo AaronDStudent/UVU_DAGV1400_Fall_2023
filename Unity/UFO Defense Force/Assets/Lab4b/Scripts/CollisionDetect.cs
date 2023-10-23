@@ -10,6 +10,12 @@ public class CollisionDetect : MonoBehaviour
     
     public int scoreToGive;
     
+    private SoundManager soundManager;
+
+    public ParticleSystem ExplosionUFO;
+
+    //private bool objDestroyed = false;
+    
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -22,11 +28,14 @@ public class CollisionDetect : MonoBehaviour
         {
             gameManager.isGameOver = true;
             Destroy(other.gameObject);
+            //objDestroyed = true;
         }
         else
         {
+            ExplosionUFO.Play();
             scoreManager.IncreaseScore(scoreToGive);// Increase the score.
             Destroy(gameObject);//Destroys this game object.
+            //objDestroyed = true;
             Destroy(other.gameObject);//Destroys the other game object it hits.
         }
     }
