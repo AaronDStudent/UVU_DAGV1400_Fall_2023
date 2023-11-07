@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Float Data", menuName = "Enemy Health Data")]
+[CreateAssetMenu(fileName = "New Float Data", menuName = "Second Float Data")]
 public class SecondFloatData : ScriptableObject
 {
-    [SerializeField] private float enemyHealth;
+    [SerializeField] private float value;
 
-    public float EnemyHealth
+    public float Value
     {
         get
         {
-            return EnemyHealth;
+            return Value;
         }
         set
         {
-            this.EnemyHealth = EnemyHealth;
+            this.Value = Value;
         }
     }
 }

@@ -1,20 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Int Data", menuName = "Weapon Damage Data")]
+[CreateAssetMenu(fileName = "The New Int Data", menuName = "New Int Data")]
+
 public class IntData : ScriptableObject
 {
-    [SerializeField] private int weaponDamage;
+    public int value;
 
-    public int WeaponDamage
+    public void UpdateValue(int num)
     {
-        get
-        {
-            return WeaponDamage;
-        }
-        set
-        {
-            this.WeaponDamage = WeaponDamage;
-        }
+        value += num;
     }
 }
-
