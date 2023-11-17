@@ -6,6 +6,7 @@ public class ColorIDBehaviour : IDContainerBehaviour
 
     private void Awake()
     {
+        //colorIDDataListObj.SetCurrentColorRandomly();
         idObj = colorIDDataListObj.currentColor;
     }
 }
